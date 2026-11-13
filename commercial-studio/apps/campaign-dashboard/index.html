@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f4f1e9">
+  <title>Fieldnote | Campaign signals</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="../../README.md" aria-label="Fieldnote Studio home"><span class="brand-mark">F</span><span>FIELDNOTE <small>STUDIO</small></span></a>
+    <span class="privacy"><i></i> Local workspace · nothing uploaded</span>
+  </header>
+  <main class="shell">
+    <section class="intro">
+      <p class="eyebrow">SIGNALS, NOT VANITY</p>
+      <h1>See what your content <em>moves.</em></h1>
+      <p class="lede">Bring campaign metrics into one calm view. Start with the fictional sample, or load your own CSV. Your file stays in this browser.</p>
+      <div class="actions">
+        <label class="button primary" for="csv-file">Import CSV</label>
+        <input id="csv-file" type="file" accept=".csv,text/csv" hidden>
+        <button class="button quiet" id="load-sample" type="button">Load example data</button>
+        <button class="text-button" id="clear-data" type="button">Clear view</button>
+      </div>
+      <p id="status" class="status" role="status">Example data is fictional and ready to explore.</p>
+    </section>
+
+    <section class="metric-grid" aria-label="Campaign totals">
+      <article class="metric"><span>Impressions</span><strong id="total-impressions">—</strong><small>times shown</small></article>
+      <article class="metric"><span>Link clicks</span><strong id="total-clicks">—</strong><small id="ctr">CTR —</small></article>
+      <article class="metric"><span>Leads</span><strong id="total-leads">—</strong><small id="lead-rate">Click-to-lead —</small></article>
+      <article class="metric accent"><span>Paid clients</span><strong id="total-paid">—</strong><small id="close-rate">Meeting close —</small></article>
+    </section>
+
+    <section class="panel chart-panel">
+      <div class="section-heading"><div><p class="eyebrow">CHANNEL VIEW</p><h2>Where the response came from</h2></div><span id="record-count" class="pill">0 records</span></div>
+      <div id="platform-chart" class="bars" aria-live="polite"></div>
+      <p id="chart-empty" class="empty">Load sample data or import a CSV to see a channel comparison.</p>
+    </section>
+
+    <section class="panel table-panel">
+      <div class="section-heading"><div><p class="eyebrow">CONTENT LOG</p><h2>Campaign rows</h2></div><a class="template-link" href="../../analytics/sample_campaign_metrics.csv" download>Get the CSV template ↗</a></div>
+      <div class="table-wrap"><table><thead><tr><th>Date</th><th>Platform</th><th>Format</th><th>Topic</th><th>Reach</th><th>Clicks</th><th>Leads</th><th>Spend</th></tr></thead><tbody id="campaign-rows"></tbody></table></div>
+      <p id="table-empty" class="empty">Nothing to show yet.</p>
+    </section>
+
+    <footer><span>Fieldnote Studio · private by design</span><span>Rates with a zero denominator show as —.</span></footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
+

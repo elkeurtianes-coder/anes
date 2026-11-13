@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#18231f">
+  <meta name="description" content="A fictional cafe website concept built for independent cafes.">
+  <title>Pocket Coffee | Concept demo</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="wordmark" href="#" aria-label="Pocket Coffee home"><span class="wordmark-icon">p</span><span>Pocket Coffee</span></a>
+    <nav aria-label="Main navigation">
+      <a href="#menu">Menu</a>
+      <a href="#visit">Visit</a>
+      <a class="nav-cta" href="#demo-note">Make this yours</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="live-dot"></span> Fictional cafe concept</p>
+        <h1>A little lift for the in-between.</h1>
+        <p class="hero-text">A bright espresso, a warm pastry, five minutes that belong to you.</p>
+        <div class="hero-actions">
+          <a class="button button-dark" href="#menu">See the sample menu</a>
+          <a class="text-link" href="#visit">Find the visit details</a>
+        </div>
+        <p class="hero-caption">Made as a website demo. Every business detail below is a placeholder.</p>
+      </div>
+
+      <div class="hero-art" aria-label="Original illustrated coffee cup" role="img">
+        <div class="orbit orbit-one"></div>
+        <div class="orbit orbit-two"></div>
+        <span class="art-label label-top">good things, briefly</span>
+        <svg class="cup-art" viewBox="0 0 380 380" aria-hidden="true">
+          <circle cx="190" cy="190" r="143" fill="#d8f36b"/>
+          <path d="M95 144h151v110c0 36-29 65-65 65h-21c-36 0-65-29-65-65V144Z" fill="#f9f6ea"/>
+          <path d="M245 164h24c27 0 45 18 45 43s-18 43-45 43h-24v-21h23c14 0 22-8 22-22s-8-22-22-22h-23v-21Z" fill="#f9f6ea"/>
+          <path d="M104 159h132c-8 23-30 39-56 39h-20c-26 0-48-16-56-39Z" fill="#6d392e"/>
+          <path d="M148 146c-13-19 13-25 2-44M187 145c-12-17 12-24 0-42M224 145c-11-16 11-22 1-38" fill="none" stroke="#f9f6ea" stroke-width="8" stroke-linecap="round"/>
+          <path d="M104 264h129c-8 30-29 48-60 48h-9c-30 0-52-18-60-48Z" fill="#fa7651"/>
+          <path d="M118 279c28 13 72 15 103 0" fill="none" stroke="#18231f" stroke-width="5" stroke-linecap="round"/>
+        </svg>
+        <span class="art-label label-bottom">espresso / pause / repeat</span>
+        <span class="art-star star-one" aria-hidden="true">✳</span>
+        <span class="art-star star-two" aria-hidden="true">✦</span>
+      </div>
+    </section>
+
+    <section class="strip" aria-label="Cafe details">
+      <span>Made for the moment</span>
+      <span>Made for the walk</span>
+      <span>Made for your neighborhood</span>
+    </section>
+
+    <section id="menu" class="menu-section">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Sample menu</p>
+          <h2>Find your usual.<br><em>Or your new one.</em></h2>
+        </div>
+        <p class="section-intro">The item names and descriptions are illustrative. A client version would use the cafe's current approved menu.</p>
+      </div>
+      <div class="filters" role="group" aria-label="Filter menu items">
+        <button type="button" data-filter="all" aria-pressed="true">Everything</button>
+        <button type="button" data-filter="coffee" aria-pressed="false">Coffee</button>
+        <button type="button" data-filter="cold" aria-pressed="false">Cold</button>
+        <button type="button" data-filter="food" aria-pressed="false">Something to eat</button>
+      </div>
+      <ul id="menu-items" class="menu-list"></ul>
+      <p class="sample-note">Sample menu only · Replace every item and price before launch.</p>
+    </section>
+
+    <section id="visit" class="visit-section">
+      <div class="visit-mark" aria-hidden="true">
+        <span class="map-ring ring-a"></span><span class="map-ring ring-b"></span><span class="map-pin">●</span>
+        <span class="map-word">here</span>
+      </div>
+      <div class="visit-copy">
+        <p class="eyebrow">Come by</p>
+        <h2>Good coffee should be easy to find.</h2>
+        <div class="visit-details">
+          <p><strong>Location</strong><span>Add the cafe address</span></p>
+          <p><strong>Hours</strong><span>Add current opening times</span></p>
+          <p><strong>Contact</strong><span>Connect the approved phone or social link</span></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="demo-note">
+    <a class="wordmark" href="#"><span class="wordmark-icon">p</span><span>Pocket Coffee</span></a>
+    <p>Fictional concept demo by Commercial Studio. Replace the brand, menu, prices, location, hours, and contact details before showing this as a live business site.</p>
+  </footer>
+</body>
+</html>
